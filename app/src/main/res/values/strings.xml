@@ -6,8 +6,15 @@
     <string name="second_fragment_label">Drugi fragment</string>
     <string name="next">Następny</string>
     <string name="previous">Poprzedni</string>
-    <string name="settings_save_button">Zapisz</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--    Settings fragment   -->
+    <string name="settings_user_name">Imię i Nazwisko</string>
+    <string name="settings_user_email">Adres Email</string>
+    <string name="settings_branch_name">Nazwa Oddziału</string>
+    <string name="settings_branch_number">Numer Oddziału</string>
+    <string name="setting_field_required">Pole Wymagane *</string>
+    <string name="settings_save_button">Zapisz</string>
 </resources>
