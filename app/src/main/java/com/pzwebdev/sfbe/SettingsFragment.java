@@ -2,10 +2,11 @@ package com.pzwebdev.sfbe;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsFragment extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class SettingsFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_configuration_fragment);
+        setContentView(R.layout.activity_settings_fragment);
 
         String SHARED_PREFERENCES = "SETTINGS";
         preferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
