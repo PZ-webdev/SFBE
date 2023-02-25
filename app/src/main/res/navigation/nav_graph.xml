@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.pzwebdev.sfbe.FirstFragment"
+        android:name="com.pzwebdev.sfbe.FileSelectFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_file_select">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"

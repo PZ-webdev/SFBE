@@ -7,13 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
-import com.pzwebdev.sfbe.databinding.FragmentFirstBinding;
+import com.pzwebdev.sfbe.databinding.FragmentFileSelectBinding;
 
-public class FirstFragment extends Fragment {
+public class FileSelectFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentFileSelectBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,20 +20,20 @@ public class FirstFragment extends Fragment {
             ViewGroup container,
             Bundle savedInstanceState
     ) {
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentFileSelectBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
+//        binding.select_file_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                NavHostFragment.findNavController(FirstFragment.this)
+//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+//            }
+//        });
     }
 
     @Override
