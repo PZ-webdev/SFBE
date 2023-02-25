@@ -8,11 +8,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class SettingsFragment extends AppCompatActivity {
 
     SharedPreferences preferences;
-    EditText editBranchName, editBranchNumber, editTextEmail;
-    String stateName, stateEmail, stateNumber;
+    TextInputEditText userName, userEmail, branchName, branchNumber;
+    String stateUserName, stateUserEmail, stateBranchName, stateBranchNumber;
     Button saveButton;
 
     @Override
@@ -22,28 +24,35 @@ public class SettingsFragment extends AppCompatActivity {
 
         String SHARED_PREFERENCES = "SETTINGS";
         preferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
-        saveButton = findViewById(R.id.saveButton);
-        editBranchName = findViewById(R.id.editBranchName);
-        editTextEmail = findViewById(R.id.editTextEmail);
-        editBranchNumber = findViewById(R.id.editBranchNumber);
 
-        stateName = preferences.getString("name", "");
-        stateEmail = preferences.getString("email", "");
-        stateNumber = preferences.getString("number", "");
+        saveButton = findViewById(R.id.button_save_settings);
+        userName = findViewById(R.id.textInputEditText_user_name);
+        userEmail = findViewById(R.id.textInputEditText_user_email);
+        branchName = findViewById(R.id.textInputEditText_branch_name);
+        branchNumber = findViewById(R.id.textInputEditText_branch_number);
 
-        editBranchName.setText(stateName);
-        editTextEmail.setText(stateEmail);
-        editBranchNumber.setText(stateNumber);
+
+        stateUserName = preferences.getString("userName", "");
+        stateUserEmail = preferences.getString("userEmail", "");
+        stateBranchName = preferences.getString("branchName", "");
+        stateBranchNumber = preferences.getString("branchNumber", "");
+
+        userName.setText(stateUserName);
+        userEmail.setText(stateUserEmail);
+        branchName.setText(stateBranchName);
+        branchNumber.setText(stateBranchNumber);
 
         saveButton.setOnClickListener(view -> {
-            String name = editBranchName.getText().toString();
-            String email = editTextEmail.getText().toString();
-            String number = editBranchNumber.getText().toString();
+            String name = userName.getText().toString();
+            String email = userEmail.getText().toString();
+            String nameBranch = branchName.getText().toString();
+            String numberBranch = branchNumber.getText().toString();
 
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putString("name", name);
-            editor.putString("email", email);
-            editor.putString("number", number);
+            editor.putString("userName", name);
+            editor.putString("userEmail", email);
+            editor.putString("branchName", nameBranch);
+            editor.putString("branchNumber", numberBranch);
             editor.commit();
 
             SettingsFragment.this.finish();
