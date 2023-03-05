@@ -4,21 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="textStart"
+    android:textDirection="firstStrongRtl"
     tools:context=".FileSelectFragment">
-
-    <Button
-        android:id="@+id/select_file_button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="132dp"
-        android:background="@color/md_theme_light_primary"
-        android:text="Wybierz plik"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ready_for_ship_button"
@@ -33,8 +21,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_card_information"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"
+        android:background="@color/md_theme_dark_errorContainer"
+        android:breakStrategy="high_quality"
+        android:clickable="false"
+        android:textAlignment="center"
+        android:textColor="@color/md_theme_dark_onSecondaryContainer"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_file_button"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
